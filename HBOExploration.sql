@@ -1,28 +1,28 @@
---Clean the columns imdb score ann tmdb_score 
+--Clean the columns imdb_score and tmdb_score 
 SELECT (CAST(imdb_score AS decimal)/10) AS new_imdb_score , (CAST(tmdb_score AS decimal)/10) AS new_tmdb_score
 FROM Hbo..HBOtiltes;
 
---Sort for the highest imdb_score movie and show
+--Find the highest imdb_score movies and shows
 SELECT title, type, genres, (CAST(imdb_score AS decimal)/10) AS new_imdb_score, imdb_votes 
 FROM Hbo..HBOtiltes
 WHERE imdb_score  is not null 
 ORDER BY imdb_score DESC;
 
 
---Sort for the highest tmdb_score movie and show
+--Find the highest tmdb_score movies and shows
 SELECT title, type, genres, (CAST(tmdb_score AS decimal)/10) AS new_tmdb_score
 FROM Hbo..HBOtiltes
 WHERE tmdb_score is not null 
 ORDER BY tmdb_score DESC;
 
 
--- Sort for the movies and shows with the largest imdb votes 
+--Find movies and shows with the most number of imdb votes 
 SELECT title, type, genres, (CAST(imdb_score AS decimal)/10) AS new_imdb_score, imdb_votes
 FROM Hbo..HBOtiltes
 WHERE imdb_score  is not null AND imdb_votes is not NULL 
 ORDER BY  imdb_votes DESC; 
 
---Find the show/movies with the highest total score = new_imdb_score * imdb_votes 
+--Find the shows/movies with the highest total score which equals new_imdb_score * imdb_votes 
 SELECT title, type, genres, (CAST(imdb_score AS decimal)/10) AS new_imdb_score, imdb_votes, imdb_votes*(CAST(imdb_score AS decimal)/10) AS total_score
 FROM Hbo..HBOtiltes
 WHERE imdb_score  is not null AND imdb_votes is not NULL 
