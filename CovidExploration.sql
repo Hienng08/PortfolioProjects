@@ -1,6 +1,6 @@
 /*
 
-This datasets can be found on https://ourworldindata.org/covid-deaths 
+This dataset can be found on https://ourworldindata.org/covid-deaths 
 Functions used: Joins, CTE's, Temp Tables, Aggregate Functions, Creating Views, Convert Data Types 
 
 */
