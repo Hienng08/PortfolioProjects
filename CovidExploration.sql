@@ -1,3 +1,10 @@
+/*
+
+This datasets can be found on https://ourworldindata.org/covid-deaths 
+Skills used: Joins, CTE's, Temp Tables, Aggregate Functions, Creating Views, Convert Data Types 
+
+*/
+
 --Filter out all the results that contains data from the WHOLE CONTINENT Or people income
 SELECT *
 FROM Covid..CovidDeaths
