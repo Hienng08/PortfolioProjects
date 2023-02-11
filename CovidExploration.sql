@@ -58,7 +58,7 @@ WHERE continent is not null
 GROUP BY date  
 ORDER BY 1,2;
 
---death percentage across all countries 
+--Death percentage across all countries 
 SELECT SUM(new_cases) as TotalCases, SUM(new_deaths) as TotalDeaths, CAST(SUM(new_deaths)AS decimal) /SUM(new_cases)* 100  as DeathPercentage 
 FROM Covid..CovidDeaths
 WHERE continent is not null
