@@ -1,7 +1,7 @@
 /*
 
 This datasets can be found on https://www.kaggle.com/datasets/victorsoeiro/hbo-max-tv-shows-and-movies 
-Skills used: Joins, CTE's, Aggregate Functions, Convert Data Types 
+Functions used: Joins, CTE's, Aggregate Functions, Convert Data Types 
 
 */
 --Clean the columns imdb_score and tmdb_score 
