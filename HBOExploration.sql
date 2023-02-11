@@ -1,7 +1,4 @@
-/*
-This datasets can be found on https://ourworldindata.org/covid-deaths 
-Skills used: Joins, CTE's, Temp Tables, Aggregate Functions, Creating Views, Converting Data Types
-*/
+
 --Clean the columns imdb_score and tmdb_score 
 SELECT (CAST(imdb_score AS decimal)/10) AS new_imdb_score , (CAST(tmdb_score AS decimal)/10) AS new_tmdb_score
 FROM Hbo..HBOtiltes;
