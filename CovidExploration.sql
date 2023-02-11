@@ -1,7 +1,7 @@
 /*
 
 This datasets can be found on https://ourworldindata.org/covid-deaths 
-Skills used: Joins, CTE's, Temp Tables, Aggregate Functions, Creating Views, Convert Data Types 
+Functions used: Joins, CTE's, Temp Tables, Aggregate Functions, Creating Views, Convert Data Types 
 
 */
 
@@ -17,7 +17,7 @@ FROM Covid..CovidDeaths
 WHERE continent is not null
 ORDER BY 1,2;
 
---Look at percentage of cases versus deaths in a specific country 
+
 --Look at the possibility of death if you got covid in Finland
 SELECT location, date, total_cases, total_deaths, (CAST(total_deaths AS decimal)/total_cases) *100  as DeathPercentage 
 FROM Covid..CovidDeaths
